@@ -91,7 +91,7 @@ svg {
 
 .content {
     grid-area: 2 / 2 / 3 / 3;
-    background-color: #f5f3ff;
+    background-color: #f8f8fc;
 }
 
 .menuItem {
@@ -99,6 +99,8 @@ svg {
     grid-auto-flow: column;
     grid-template-columns: 1fr 5fr;
     column-gap: 10px;
+    justify-content: center;
+    align-content: center;
 }
 
 #dashboardTitle {
@@ -127,15 +129,24 @@ p {
 
 .menuSection {
     padding-top: 20px;
+
 }
 
 .searchForm {
     background-color: #d1c7fc;
-    width: 100%;
+    width: 80%;
     border-radius: 30px;
     display: grid;
     grid-template-columns: auto 1fr;
     height: 24px;
+    align-items: center;
+    justify-items: start;
+    margin-left: 20px;
+}
+
+form:focus,
+form: {
+    border: none;
 }
 
 form, 
@@ -157,6 +168,7 @@ input {
 .headerIcon {
     padding-top: 0px;
     padding-left: 5px;
+    opacity: .6;
 }
 
 .accountInfo,
@@ -172,13 +184,60 @@ input {
     padding-right: 50px;
 }
 
+.welcomeMessage {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    margin-left: 20px;
+}
+
 button {
     width: 100px;
-    height: 40px;
+    height: 35px;
     background-color: #7c3aed;
     border-radius: 20px;
     border: none;
     box-shadow: 0px 1px 2px #d1c7fc;
     font-weight: 600;
     color: white;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.content-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.contentSection,
+.contentSideSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items:self-start;
+    justify-content:start;
+    background: #f0edfe;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 10px;
+    box-shadow: 2px 2px 2px #f0edfe;
+}
+
+.contentIcon {
+    justify-self: unset;
+    align-self: unset;
 }
